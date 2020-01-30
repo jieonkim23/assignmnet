@@ -23,16 +23,18 @@ int euclid(int a, int b) {
 	if (b<small) small=b;
 	for (small; small>0; small-=1)
 		if (a%small==0 && b%small==0) return small;
-			
 	return 1;
 }
 
 int main(void) {
 	int a, b;
+	
 	printf("Enter two positive integers\n");
 	scanf("%d%d",&a,&b);
+	
 	printf("GCD of (%d,%d) is %d\n",a,b,GCD(a,b));
 	printf("LCM of (%d,%d) is %d\n",a,b,LCM(a,b));
 	printf("(%d,%d) is Coprime (True-1/False-0) : %d\n", a,b, isCoprime(a,b));
+	
 	return 0;
 }
